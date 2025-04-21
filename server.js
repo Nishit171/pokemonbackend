@@ -53,7 +53,7 @@ app.get("/", (req, res) => {
   
 
 // Get multiple pokemon by names (case-insensitive)
-app.post('/api/pokemon', async (req, res) => {
+app.post('/api/pokemons', async (req, res) => {
   const { names } = req.body;
   try {
     const regexNames = names.map(name => new RegExp(`^${name}$`, 'i')); // case-insensitive
